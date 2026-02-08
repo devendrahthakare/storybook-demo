@@ -1,0 +1,10 @@
+.storybook-badge {
+    display: inline-block;
+    border-radius: 100%;
+    background-color: #236FBC;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    line-height: 1;
+    color: #fff;
+}

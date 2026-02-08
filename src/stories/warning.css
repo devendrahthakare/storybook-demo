@@ -1,0 +1,15 @@
+.storybook-warning-icon {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 0.65em solid transparent;
+    border-right: 0.65em solid transparent;
+    border-bottom: 1em solid #000;
+    color: #fff;
+}
+
+.exl-mark {
+    font-size: 0.7em;
+    position: relative;
+    right: 0.12em;
+}

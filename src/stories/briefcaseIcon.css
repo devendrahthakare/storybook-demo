@@ -1,0 +1,10 @@
+.storybook-briefcaseIcon {
+    background-color: #6EC58F;
+    display: inline-block;
+    padding: 0.3em;
+    border-radius: 0.2em;
+}
+
+.storybook-briefcaseIcon svg {
+    vertical-align: middle;
+}

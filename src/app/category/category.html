@@ -1,0 +1,150 @@
+<div class="switch-mode">Switch to {{ darkMode ? 'Light Mode' : 'Dark Mode' }}: <storybook-toggle
+        [(checked)]="darkMode"></storybook-toggle>
+</div>
+<div class="pd-1 dark-mode" [class.dark-mode]="darkMode">
+    <section>
+        <article>
+            <details>
+                <summary>
+                    <storybook-title title="Title" fontSize="1.2em" fontWeight="bold"></storybook-title>
+                    <storybook-link></storybook-link>
+                </summary>
+                <div class="gray-container">
+                    @if(categoryObj){
+                    @for(listItem of categoryObj; track listItem.id){
+                    <div class="list-item bb-1">
+                        <div class="list-item-top">
+                            @if(listItem.briefCaseIcon){
+                            <span class="icon"><storybook-briefcaseIcon></storybook-briefcaseIcon></span>
+                            }
+                            <div class="text">
+                                @if(listItem.title){
+                                <div class="title"><storybook-title title="Title" fontSize="0.9em"
+                                        fontWeight="bold"></storybook-title></div>
+                                }
+                                @if(listItem.subtitle){
+                                <div class="subtitle">
+                                    <span class="warning"><storybook-warning color="#FCB76E"></storybook-warning></span>
+                                    <span><storybook-title title="Subtitle" fontSize="0.7em" fontWeight="normal"
+                                            color="{{darkMode ? '#999' : '#555'}}"></storybook-title></span>
+                                </div>
+                                }
+                            </div>
+                            @if(listItem.mapIcon){
+                            <div class="flex-2"><storybook-map
+                                    hrefURL="https://www.google.com/maps/@center_lat,center_lon,zoom_levelz"
+                                    color="{{darkMode ? '#fff' : '#000'}}"></storybook-map></div>
+                            }
+                            @if(listItem.rightArrow){
+                            <div class="flex-2"><storybook-rightArrow size="1em"
+                                    color="{{darkMode ? 'white' : 'black'}}"></storybook-rightArrow></div>
+                            }
+                            @if(listItem.dropdown){
+                            <div class="flex-2"><storybook-dropdown
+                                    color="{{darkMode ? '#aaa' : '#545454'}}"></storybook-dropdown></div>}
+                            @if(listItem.sampleBtn){
+                            <div class="flex-2"><storybook-button
+                                    color="{{darkMode ? 'white' : 'black'}}"></storybook-button></div>}
+                            @if(listItem.placeholder){
+                            <div class="flex-2"><storybook-placeholder
+                                    bgColor="{{darkMode ? '#1E1E1E' : '#fff'}}"></storybook-placeholder></div>
+                            }
+
+                        </div>
+                        @if(listItem.labelsShow){
+                        <div class="list-item-bottom labels">
+
+                            <storybook-label color="{{darkMode ? '#fff' : '#000'}}"
+                                backgroundColor="{{darkMode ? '#666' : '#F1F1F1'}}"></storybook-label>
+                            <storybook-label color="{{darkMode ? '#fff' : '#000'}}"
+                                backgroundColor="{{darkMode ? '#666' : '#F1F1F1'}}"></storybook-label>
+                            <storybook-label color="{{darkMode ? '#fff' : '#000'}}"
+                                backgroundColor="{{darkMode ? '#666' : '#F1F1F1'}}"></storybook-label>
+                            <storybook-label color="{{darkMode ? '#fff' : '#000'}}"
+                                backgroundColor="{{darkMode ? '#666' : '#F1F1F1'}}"></storybook-label>
+
+                        </div>
+                        }
+                    </div>
+
+                    } @empty {
+                    <div>No row found.</div>
+                    }
+                    }
+                </div>
+
+
+            </details>
+        </article>
+    </section>
+
+    @if(categoryObjSingle){
+    @for(listItem of categoryObjSingle; track listItem.id){
+    <div class="gray-container">
+        <div class="list-item">
+            <div class="list-item-top">
+                @if(listItem.briefCaseIcon){
+                <span class="icon"><storybook-briefcaseIcon></storybook-briefcaseIcon></span>
+                }
+                <div class="text">
+                    @if(listItem.title){
+                    <div class="title"><storybook-title title="Title" fontSize="0.9em"
+                            fontWeight="bold"></storybook-title>
+                    </div>
+                    }
+                    @if(listItem.subtitle){
+                    <div class="subtitle">
+                        <span class="warning"><storybook-warning color="#FCB76E"></storybook-warning></span>
+                        <span><storybook-title title="Subtitle" fontSize="0.7em" fontWeight="normal"
+                                color="{{darkMode ? '#999' : '#555'}}"></storybook-title></span>
+                    </div>
+                    }
+                </div>
+                @if(listItem.mapIcon){
+                <div class="flex-2"><storybook-map
+                        hrefURL="https://www.google.com/maps/@center_lat,center_lon,zoom_levelz"
+                        color="{{darkMode ? '#fff' : '#000'}}"></storybook-map></div>
+                }
+                @if(listItem.rightArrow){
+                <div class="flex-2"><storybook-rightArrow size="1em"
+                        color="{{darkMode ? 'white' : 'black'}}"></storybook-rightArrow></div>
+                }
+                @if(listItem.dropdown){
+                <div class="flex-2"><storybook-dropdown color="{{darkMode ? '#aaa' : '#545454'}}"></storybook-dropdown>
+                </div>}
+                @if(listItem.sampleBtn){
+                <div class="flex-2"><storybook-button color="{{darkMode ? 'white' : 'black'}}"></storybook-button></div>
+                }
+                @if(listItem.placeholder){
+                <div class="flex-2"><storybook-placeholder
+                        bgColor="{{darkMode ? '#1E1E1E' : '#fff'}}"></storybook-placeholder></div>
+                }
+
+            </div>
+            <div class="list-item-bottom labels">
+                @if(listItem.labelsShow){
+                <storybook-label color="{{darkMode ? '#fff' : '#000'}}"
+                    backgroundColor="{{darkMode ? '#666' : '#F1F1F1'}}"></storybook-label>
+                <storybook-label color="{{darkMode ? '#fff' : '#000'}}"
+                    backgroundColor="{{darkMode ? '#666' : '#F1F1F1'}}"></storybook-label>
+                <storybook-label color="{{darkMode ? '#fff' : '#000'}}"
+                    backgroundColor="{{darkMode ? '#666' : '#F1F1F1'}}"></storybook-label>
+                <storybook-label color="{{darkMode ? '#fff' : '#000'}}"
+                    backgroundColor="{{darkMode ? '#666' : '#F1F1F1'}}"></storybook-label>
+                }
+            </div>
+
+        </div>
+    </div>
+    }
+    @empty {
+    <div>No row found.</div>
+    }
+    }
+
+    <div class="gray-container">
+        <storybook-replaceMe color="{{darkMode ? '#fff' : '#000'}}" borderColor="{{darkMode ? '#9169C0' : '#503A6A'}}"
+            bgColor="{{darkMode ? '#2a1247' : '#DDD1EB'}}"></storybook-replaceMe>
+    </div>
+
+</div>

@@ -1,0 +1,112 @@
+.switch-mode {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 1em;
+}
+
+.pd-1 {
+    padding: 1em;
+}
+
+.mr-title {
+    margin-left: 2.7em;
+}
+
+.flex-2 {
+    flex: 2;
+    text-align: right;
+}
+
+summary {
+    width: calc(100% - 10px);
+    margin-bottom: 0.5em;
+    position: relative;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+storybook-link {
+    position: absolute;
+    right: 0;
+}
+
+summary:focus {
+    outline-style: none;
+}
+
+.gray-container {
+    background-color: #FAFAFA;
+    border: 1px solid #D5D5D5;
+    border-radius: 0.5em;
+    padding: 0em 0.8em;
+    margin-bottom: 1.5em;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.gray-container>div:last-child {
+    border: 0 none;
+}
+
+summary::marker {
+    font-size: 0.8em;
+}
+
+
+/* title subtitle css start*/
+.list-item {
+    padding: 0.5em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bb-1 {
+    border-bottom: 1px solid #D5D5D5;
+}
+
+.list-item-top {
+    display: flex;
+    align-items: center;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.icon {
+    margin-right: 0.5em;
+}
+
+.text {
+    flex: 1;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.warning {
+    margin-right: 0.2em;
+
+}
+
+.subtitle {
+    gap: 4px;
+}
+
+.labels {
+    margin-top: 0.5em;
+}
+
+/* title subtitle css end*/
+
+storybook-toggle {
+    position: relative;
+}
+
+.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+.dark-mode .gray-container {
+    background-color: #1E1E1E;
+    border: 1px solid #D5D5D5;
+    border-radius: 0.5em;
+    padding: 0em 0.8em;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
